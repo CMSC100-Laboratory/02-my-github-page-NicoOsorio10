@@ -77,7 +77,7 @@ body {
 
 /* Header */
 header {
-  background: var(--blue-light);
+  background: var(--white);
   padding: 20px;
   border-radius: 16px;
   margin-bottom: 20px;
@@ -137,7 +137,7 @@ li {
 
 /* Footer */
 footer {
-  background: var(--blue-light);
+  background: var(--white);
   padding: 10px;
   margin-top: 20px;
   border-radius: 16px;
