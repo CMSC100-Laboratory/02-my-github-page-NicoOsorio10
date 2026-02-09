@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Biography</title>
+  <title>Biography</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Sidebar Navigation -->
   <nav class="sidebar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="#">Projects</a>
+    <a href="#">
+      <span class="icon">🏠</span>
+      <span class="label">Home</span>
+    </a>
+    <a href="#">
+      <span class="icon">👤</span>
+      <span class="label">About</span>
+    </a>
+    <a href="#">
+      <span class="icon">🛠</span>
+      <span class="label">Skills</span>
+    </a>
+    <a href="#">
+      <span class="icon">📁</span>
+      <span class="label">Projects</span>
+    </a>
   </nav>
 
-  <!-- Page content -->
+  <!-- Main Page -->
   <div class="page">
 
     <header>
@@ -24,19 +36,20 @@
     </header>
 
     <main>
+
       <section class="featured">
         <img src="photo.jpg" alt="Featured Photo">
       </section>
 
-      <section class="about">
+      <section class="about card">
         <p>
-          I am a computer science student passionate about building clean,
-          functional software and learning new technologies.
+          I am a computer science student with an interest in building clean,
+          efficient software and learning new technologies.
         </p>
       </section>
 
       <section class="content-row">
-        <div class="skills">
+        <div class="skills card">
           <h2>Skills</h2>
           <ul>
             <li>HTML & CSS</li>
@@ -46,15 +59,16 @@
           </ul>
         </div>
 
-        <div class="projects">
+        <div class="projects card">
           <h2>Projects</h2>
           <ul>
-            <li>Music Player App</li>
+            <li>Music Player Application</li>
             <li>Simplex Solver</li>
             <li>Inventory System</li>
           </ul>
         </div>
       </section>
+
     </main>
 
     <footer>

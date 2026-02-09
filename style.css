@@ -6,41 +6,67 @@
   font-family: Arial, sans-serif;
 }
 
-/* Colors */
+/* Color Palette */
 :root {
-  --light: #EFECE3;
-  --mid: #8FABD4;
-  --dark: #4A70A9;
+  --white: #EFECE3;
+  --blue-light: #8FABD4;
+  --blue-dark: #4A70A9;
   --black: #000000;
 }
 
+/* Page background */
 body {
-  background: var(--light);
+  min-height: 100vh;
   display: flex;
+  background: linear-gradient(
+    180deg,
+    var(--blue-light) 0%,
+    var(--white) 65%
+  );
 }
 
-/* Sidebar */
+/* Sidebar Navigation */
 .sidebar {
-  width: 50px;
+  width: 60px;
   background: var(--black);
   height: 100vh;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
   overflow: hidden;
 }
 
 .sidebar:hover {
-  width: 160px;
+  width: 180px;
 }
 
 .sidebar a {
-  display: block;
-  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 15px;
+  color: white;
   text-decoration: none;
 }
 
 .sidebar a:hover {
-  background: var(--dark);
+  background: var(--blue-dark);
+}
+
+.icon {
+  font-size: 20px;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Hide labels by default */
+.label {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Show labels on hover */
+.sidebar:hover .label {
+  opacity: 1;
 }
 
 /* Page content */
@@ -51,12 +77,17 @@ body {
 
 /* Header */
 header {
-  background: var(--mid);
+  background: var(--blue-light);
   padding: 20px;
+  border-radius: 16px;
   margin-bottom: 20px;
 }
 
-/* Featured photo */
+header h1 {
+  margin-bottom: 5px;
+}
+
+/* Featured Photo */
 .featured {
   display: flex;
   justify-content: center;
@@ -65,32 +96,50 @@ header {
 
 .featured img {
   width: 200px;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* About */
-.about {
-  background: white;
+/* Card style (About, Skills, Projects) */
+.card {
+  background: var(--white);
   padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* About section */
+.about {
   margin-bottom: 20px;
 }
 
-/* Skills & Projects */
+/* Skills & Projects layout */
 .content-row {
   display: flex;
   gap: 20px;
 }
 
-.skills, .projects {
-  background: white;
-  padding: 20px;
-  flex: 1;
+/* Section titles */
+h2 {
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
 }
 
 /* Footer */
 footer {
-  background: var(--mid);
+  background: var(--blue-light);
   padding: 10px;
   margin-top: 20px;
+  border-radius: 16px;
   text-align: center;
 }
