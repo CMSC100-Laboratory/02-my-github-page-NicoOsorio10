@@ -1,35 +1,36 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-/* Color Palette */
+
 :root {
   --white: #EFECE3;
   --blue-light: #8FABD4;
-  --blue-dark: #4A70A9;
+  --blue-dark: #191970;
   --black: #000000;
 }
 
-/* Page background */
+
 body {
   min-height: 100vh;
   display: flex;
   background: linear-gradient(
     180deg,
-    var(--blue-light) 0%,
-    var(--white) 65%
+    var(--blue-dark) 30%,
+    var(--white) 75%
   );
 }
 
-/* Sidebar Navigation */
+
 .sidebar {
   width: 60px;
   background: var(--black);
   height: 100vh;
+  position: sticky;
+  top: 0;
   transition: width 0.3s ease;
   overflow: hidden;
 }
@@ -57,37 +58,39 @@ body {
   text-align: center;
 }
 
-/* Hide labels by default */
+
 .label {
   opacity: 0;
   transition: opacity 0.2s ease;
   white-space: nowrap;
 }
 
-/* Show labels on hover */
+
 .sidebar:hover .label {
   opacity: 1;
 }
 
-/* Page content */
+
 .page {
   flex: 1;
   padding: 20px;
 }
 
-/* Header */
+
 header {
   background: var(--white);
   padding: 20px;
   border-radius: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
+
+  border: 2px solid var(--blue-dark);
 }
 
 header h1 {
   margin-bottom: 5px;
 }
 
-/* Featured Photo */
+
 .featured {
   display: flex;
   justify-content: center;
@@ -100,32 +103,35 @@ header h1 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Card style (About, Skills, Projects) */
+
 .card {
   background: var(--white);
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  border: 2px solid var(--blue-dark);
 }
 
-/* About section */
+
 .about {
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
-/* Skills & Projects layout */
+
 .content-row {
   display: flex;
+  justify-content: stretch;
   gap: 20px;
 }
 
-/* Section titles */
+
 h2 {
   color: var(--blue-dark);
   margin-bottom: 10px;
 }
 
-/* Lists */
+
 ul {
   list-style-type: disc;
   padding-left: 20px;
@@ -135,13 +141,10 @@ li {
   margin-bottom: 5px;
 }
 
-/* Footer */
+
 footer {
-  position: fixed;
-  bottom: 1%;
-  width: 90%;
   background: var(--blue-light);
-  padding: 5px;
+  padding: 10px;
   margin-top: 20px;
   border-radius: 16px;
   text-align: center;
